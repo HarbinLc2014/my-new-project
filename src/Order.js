@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, ScrollView, Text, Platform, StyleSheet, Dimensions, KeyboardAvoidingView, Alert, Image, Keyboard } from 'react-native';
+import { View, ScrollView, Text, Platform, StyleSheet, Dimensions, KeyboardAvoidingView, Alert, Image, Keyboard, TouchableOpacity } from 'react-native';
 import { Card, FormLabel, FormInput, Button, FormValidationMessage } from 'react-native-elements';
 import { Font } from 'expo';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -33,7 +33,7 @@ class Order extends Component {
         btTextStyles3[1] = styles.btText_with_font3;
     }
     return (
-      <ScrollView style={{ paddingTop: 50 }}>
+      <ScrollView style={{ paddingTop: 50}}>
         <Card title="订单信息" titleStyle={btTextStyles}>
         <View style={{ alignItems: 'center', justifyContent: 'center', marginBottom: 0 }}>
         <CardSection style={{ flexDirection: 'row' }}>
@@ -51,6 +51,11 @@ class Order extends Component {
           value={this.state.name}
           onChangeText={name => this.setState({ name })}
         />
+        <TouchableOpacity style={{ flexDirection: 'row', width: null, flex: 1, alignItems: 'center' }}>
+        <FormLabel containerStyle={{ marginBottom: 35, marginRight: 40, height: 20 }} labelStyle={{ textAlign: 'center' }}>收货地址</FormLabel>
+        <FormLabel containerStyle={{ marginBottom: 35, marginRight: 40, height: 20 }} labelStyle={{ textAlign: 'center' }}>北京</FormLabel>
+        <FormLabel containerStyle={{ marginBottom: 35, height: 20 }} labelStyle={{ textAlign: 'center' }}>北京市</FormLabel>
+        </TouchableOpacity>
         <FormLabel containerStyle={{ marginBottom: 8, width: null, height: 20 }}>详细地址</FormLabel>
         <FormInput
         containerStyle={{ width: null, height: 30, marginBottom: 20 }}
