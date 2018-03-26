@@ -1,0 +1,19 @@
+var ParseDashboard = require('parse-dashboard');
+var dashboard = new ParseDashboard({
+    apps: [
+        {
+            appName: "My Bitnami Parse API",
+            appId: "64bcfdfcfed7405051ff8b6eef1ac2f04d373923",
+            masterKey: "8fe1f59b079eedae03fa83be2602c44eb95de488",
+            fileKey: "115d10efe5db80f28f474adb3aafb9c83c0b030c",
+            production: true,
+            serverURL: "http://18.188.130.178:80/parse"
+        }
+    ],
+    users: [
+        {
+            user: "user",
+            pass: "$2a$10$kO6nGma6voE76H/D4/drsOYaV/fKFSg51dLKyitqdcoSTw9/w7bPC"
+        }
+    ], useEncryptedPasswords: true
+});
