@@ -69,7 +69,7 @@ class Order extends Component {
           value={this.state.phone}
           onChangeText={phone => this.setState({ phone })}
         />
-        <FormLabel containerStyle={{ marginBottom: 18, width: null, height: 20 }}>备注(颜色尺码，如:颜色: 蓝色, 尺码: L)</FormLabel>
+        <FormLabel containerStyle={{ marginBottom: 8, width: null, height: 20 }}>备注(颜色尺码，如:颜色: 蓝色, 尺码: L)</FormLabel>
         <FormInput
         containerStyle={{ width: null, height: 30, marginBottom: 20 }}
           value={this.state.ps}
